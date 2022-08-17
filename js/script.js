@@ -26,7 +26,20 @@ function playRound(computerSelection, playerSelection) {
         console.log("You Lose! Scissor beats Paper")
         computerScore += 1;
         playerScore += 0;
-    } else if (playerSelection.toLowerCase() === computerSelection) {
+    } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+        console.log("You Win! Paper beats Rock")
+        computerScore += 0;
+        playerScore += 1;
+    } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+        console.log("You Win! Rock beats Scissors")
+        computerScore += 0;
+        playerScore += 1;
+    } else if (playerSelection.toLowerCase() === "scissor" && computerSelection === "paper") {
+        console.log("You Win! Scissor beats Paper")
+        computerScore += 0;
+        playerScore += 1;
+    }
+    else if (playerSelection.toLowerCase() === computerSelection) {
         console.log("There is a tie - Play Again")
     }
 }
