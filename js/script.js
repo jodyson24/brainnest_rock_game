@@ -9,15 +9,9 @@ function computerPlay() {
 
 
 function playRound(computerSelection, playerSelection) {
-    if (playerSelection != "rock" || playerSelection != "paper") {
+    if (playerSelection == undefined) {
         console.log("Your input is not a valid input")
-    } 
-    
-    if (playerSelection != "scissors" || !playerSelection){
-        console.log("Your input is not a valid input")
-    }
-    
-    if (playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
         console.log("You Lose! Paper beats Rock")
         computerScore += 1;
         playerScore += 0;
